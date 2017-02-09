@@ -3,7 +3,7 @@
 <suite name="Static context sample suite" parallel="tests" thread-count="2">
     <test name="Static call 1">
         <classes>
-            <class name="com.globale.automation.AnnaWebSiteTest">
+            <class name="com.globale.automation.testcase.AnnaWebSiteTest">
                 <methods>
                     <include name="searchForAutomationInGoogle"/>
                 </methods>
@@ -13,7 +13,7 @@
 
     <test name="Static call 2">
         <classes>
-            <class name="com.globale.automation.AnnaWebSiteTest">
+            <class name="com.globale.automation.testcase.AnnaWebSiteTest">
                 <methods>
                     <include name="searchForAutomationInGoogle"/>
                 </methods>
