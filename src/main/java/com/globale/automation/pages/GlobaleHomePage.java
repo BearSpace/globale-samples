@@ -9,9 +9,7 @@ import org.openqa.selenium.WebElement;
  */
 public class GlobaleHomePage extends BasePage {
 
-    //private By shippingCountry = By.id("shippingSwitcherLink");
-    private By shippingButt = By.cssSelector("#shippingSwitcherLink");
-
+    private By shippingButt = By.xpath("//*[@id='shippingSwitcherLink']");
     private By contButton = By.xpath("//*[@id='globalePopupWrapper']//div[@id='globale_popup']//input");
 
     public GlobaleHomePage verifyWelcomeScreen() {
@@ -21,12 +19,15 @@ public class GlobaleHomePage extends BasePage {
     }
 
     public boolean validateCountryDetails() {
-        waitForItemsAppearance(shippingButt);
-        WebElement element = findElement(shippingButt);
-        element.click();
-        System.out.println("done");
+        if (waitForItemsAppearance(shippingButt) == 1) {
+            WebElement element = findElement(shippingButt);
+            if (element.isEnabled()) {
+                element.click();
+                return true;
+            }
+
+        }
         return false;
     }
-
 
 }

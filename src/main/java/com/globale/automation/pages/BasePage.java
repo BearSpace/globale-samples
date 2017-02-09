@@ -20,7 +20,7 @@ public class BasePage {
     private WebDriver driver;
     private WebDriverWait webDriverWait;
 
-    private static final long VISIBILITY_TIMEOUT = 10;
+    private static final long VISIBILITY_TIMEOUT = 15;
 
     public BasePage() {
         this.driver = getDriver();

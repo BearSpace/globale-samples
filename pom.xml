@@ -24,6 +24,8 @@
         <javaslang.version>2.0.0-RC2</javaslang.version>
         <selenium.java.version>2.53.1</selenium.java.version>
         <commons.lang3.version>3.4</commons.lang3.version>
+        <log4j.version>1.2.17</log4j.version>
+        <slf4j.version>1.7.5</slf4j.version>
     </properties>
 
     <build>
@@ -51,7 +53,6 @@
         </plugins>
     </build>
 
-
     <dependencies>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -78,7 +79,23 @@
             <artifactId>reflectasm</artifactId>
             <version>1.11.0</version>
         </dependency>
+        <!-- Logger -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <!-- End Logger -->
     </dependencies>
-
 
 </project>
