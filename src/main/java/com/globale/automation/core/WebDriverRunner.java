@@ -6,8 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 import java.lang.reflect.Method;
@@ -24,7 +22,6 @@ public class WebDriverRunner {
     protected static boolean isInitiated = false;
 
     protected static boolean beforeClass = true;
-
 
     @BeforeMethod
     public void initTestBase(ITestContext context, Method method) {

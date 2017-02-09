@@ -33,7 +33,7 @@ public class AnnaWebSiteTest extends WebDriverRunner {
                 globaleHomePage = loadSiteUrl(format("http://%s:%s@%s", USERNAME, PASSWORD, URL)).verifyWelcomeScreen();
             } catch (Exception ex) {
                 log.error("Failed to load URL.");
-                Assert.fail("Failed ");
+                Assert.fail("Failed to load page.");
             } finally {
                 beforeClass = false;
             }
