@@ -49,6 +49,6 @@ public class AnnaWebSiteTest extends WebDriverRunner {
     public void verifyShippingPopup() throws InterruptedException {
         Thread.sleep(4000);
         boolean validateCountryDetails = globaleHomePage.validateCountryDetails();
-        Assert.assertTrue(validateCountryDetails, "Failed.");
+        Assert.assertTrue(validateCountryDetails, "Failed navigate to popup.");
     }
 }
