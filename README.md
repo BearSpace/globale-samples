@@ -1,6 +1,6 @@
 # globale-samples	
 	version 0.1
-1. Create deirectory c:\grid\lib and create directory c:\selenium	
+1. Create directory c:\grid\lib and create directory c:\selenium	
 2. Download selenium-server-standalone-2.53.0.jar and locate in directory c:\grid\lib	
 3. Download chromedriver.exe and locate in directory c:\selenium	
 4. Open cmd line with admin previlages ("Run as adninstrator") get to directory C:\Grid\lib>	
