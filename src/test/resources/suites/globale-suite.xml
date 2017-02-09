@@ -5,7 +5,7 @@
         <classes>
             <class name="com.globale.automation.testcase.AnnaWebSiteTest">
                 <methods>
-                    <include name="searchForAutomationInGoogle"/>
+                    <include name="loginToWebClient"/>
                 </methods>
             </class>
         </classes>
@@ -15,7 +15,7 @@
         <classes>
             <class name="com.globale.automation.testcase.AnnaWebSiteTest">
                 <methods>
-                    <include name="searchForAutomationInGoogle"/>
+                    <include name="verifyShippingPopup"/>
                 </methods>
             </class>
         </classes>

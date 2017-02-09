@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static com.globale.automation.core.WebDriverRunner.getDriver;
 
@@ -37,6 +38,10 @@ public class BasePage {
         return driver.findElements(locator);
     }
 
+    public void switchIframe(final String iframe) {
+        driver.switchTo().frame(iframe);
+    }
+
     public void setText(final By locator, CharSequence text) {
         findElement(locator).clear();
         findElement(locator).sendKeys(text);
@@ -44,6 +49,22 @@ public class BasePage {
 
     public String getValue(final By locator) {
         return findElement(locator).getAttribute("value");
+    }
+
+    public String getValueByAttribute(final By locator, String attr) {
+        return findElement(locator).getAttribute(attr);
+    }
+
+    public int waitForItemsAppearance(final By locator) {
+        final AtomicInteger size = new AtomicInteger(0);
+        webDriverWait.until((WebDriver driver) -> {
+            final int collectionSize = findElements(locator).size();
+            if (collectionSize > 0) {
+                size.set(collectionSize);
+            }
+            return collectionSize > 0;
+        });
+        return size.get();
     }
 
 }
